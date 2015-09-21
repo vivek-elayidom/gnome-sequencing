@@ -1,0 +1,338 @@
+@import 'compass'
+@import 'material-colors/sass-material-colors'
+@import 'bs3-offset-right'
+
+.app
+  position: relative
+  width: 100%
+  padding: 50px 0
+  &.user-login
+    position: fixed
+    height: 100%
+    padding: 0
+
+.full-ht
+  height: 100% !important
+
+.login-bg
+  width: 100%
+  height: 100%
+  position: fixed
+  background-image: url(../images/login-bg.jpg)
+  background-repeat: no-repeat
+  +background-size(cover)
+  background-position: left center
+
+.dna-bg
+  width: 100%
+  height: 100%
+  background-image: url(../images/login-bg.jpg)
+  background-repeat: no-repeat
+  +background-size(cover)
+  background-position: center center
+  position: fixed
+
+.login
+  width: 100%
+  height: 100%
+  background-color: rgba(255,255,255,0.9)
+  border-left: solid 2px material-color('red', '800')
+  border-right: solid 2px material-color('red', '800')
+  .form-control, .input-group-addon
+    +border-radius(0)
+    border-color: material-color('red', '800')
+    +box-shadow(none)
+    &:hover, &:focus, &:active
+      +box-shadow(none)
+  .input-group-addon
+    background-color: material-color('red', '800')
+    color: white
+  .panel-default
+    border: none
+    +border-radius(0)
+    +box-shadow(none)
+    background-color: transparent
+  .panel-heading
+    font-size: 24px
+    font-weight: normal
+    color: material-color('red', '800')
+    background: transparent
+    padding: 10px 24px
+  .panel-footer
+    font-size: 13px
+    font-weight: normal
+    color: material-color('grey', '600')
+    background: transparent
+    padding: 10px 24px
+  .panel-body
+    padding: 24px
+  .btn-primary
+    background-color: material-color('red', '800')
+    border: none
+    color: material-color('grey', '100')
+    +border-radius(0)
+    &:hover, &:focus, &:active
+      background-color: material-color('red', '600')
+      color: white
+
+.upload-annotate-refine
+  width: 100%
+  height: 100%
+  //background-color: material-color('grey', '300')
+  z-index: 1
+  //.panel-default
+    //background: rgba(255,255,255,0.95)
+  .nav-tabs
+    border: none
+    > li
+      margin: 0
+      > a
+        border: none
+        margin: 0
+        padding: 20px 50px 10px 50px
+        color: material-color('grey', '500')
+        +border-radius(0)
+        border-top: solid 2px material-color('red', '800')
+        span
+          position: absolute
+          background-color: material-color('grey', '100')
+          color: material-color('grey', '600')
+          font-size: 18px
+          width: 32px
+          height: 32px
+          +border-radius(50%)
+          line-height: 28px
+          text-align: center
+          top: -16px
+          left: 50%
+          margin-left: -16px
+          border: solid 2px material-color('red', '800')
+          +box-sizing(border-box)
+      &.active
+        > a
+          border: none
+          cursor: pointer
+          color: material-color('red', '800')
+          border-top: solid 2px material-color('red', '800')
+          background: transparent
+          span
+            background-color: material-color('red', '800')
+            color: white
+          &:focus, &:hover
+            border: none
+            border-top: solid 2px material-color('red', '800')
+            background-color: transparent
+      &:hover, &:focus, &:active
+        a
+          background-color: transparent
+  .tab-content
+    padding: 20px 0
+    legend
+      color: material-color('red', '800')
+      border: none
+  .progress
+    height: 10px
+    +border-radius(0)
+  .btn-primary
+    background-color: material-color('red', '800')
+    border: none
+    color: material-color('grey', '100')
+    i
+      margin-right: 5px
+    +border-radius(0)
+    &:hover, &:focus, &:active
+      background-color: material-color('red', '600')
+      color: white
+  .btn-group-lg
+    width: 100%
+    margin-bottom: 10px
+    .btn + .btn
+      margin-left: 0
+    .btn-primary
+      width: 48%
+      &:nth-of-type(odd)
+        margin-right: 2%
+      &:nth-of-type(even)
+        margin-left: 2%
+      &.disabled
+        background-color: material-color('grey', '300')
+        color: material-color('grey', '900')
+  .panel-default
+    padding: 30px 15px 15px 15px
+  .refine
+    .panel-default
+      padding: 15px
+      height: 220px
+      position: relative
+      .panel-body
+        padding: 0
+        position: relative
+    .btn-primary
+      &:nth-of-type(1)
+        margin-right: 5px
+    .form-control
+      //background-color: transparent
+      //+border-radius(0)
+      +box-shadow(none)
+      //border: none
+      //color: material-color('grey', '500')
+      //padding: 5px 0
+      //border-bottom: solid 1px material-color('grey', '300')
+      //height: auto
+    h5
+      margin: 0
+    .input-group-addon
+      +border-radius(0)
+      background: transparent
+      border: none
+      padding: 5px 12px 5px 0
+      height: auto
+      color: material-color('grey', '500')
+    .text-muted
+      padding: 6px 0
+      color: material-color('grey', '500')
+    .checkbox
+      &:first-of-type
+        margin-top: 0
+      &:last-of-type
+        margin-bottom: 0
+    .btn-warning
+      +border-radius(0)
+      background-color: material-color('brown', '500')
+      border: none
+      i
+        margin-right: 5px
+      &.overflow-btn
+        position: absolute
+        bottom: -20px
+        left: 0
+    .added-filter1
+      display: none
+      .list-inline
+        max-height: 105px
+        overflow-y: auto
+        //padding: 15px
+        //background-color: material-color('grey', '100')
+        li
+          padding-left: 12px
+          padding-right: 12px
+          margin-bottom: 5px
+          .badge
+            background-color: material-color('grey', '200')
+            cursor: pointer
+            color: material-color('grey', '500')
+            margin-left: 5px
+        margin: 15px 0 0 0
+        .row
+          margin-top: 2px
+          margin-bottom: 2px
+    .active-filters
+      margin-top: 15px
+      .panel-default
+        height: auto
+      .list-inline
+        margin-bottom: 5px
+        .badge
+          background-color: material-color('grey', '200')
+          cursor: pointer
+          color: material-color('grey', '500')
+          margin-left: 5px
+
+.auto-height
+  height: auto !important
+  min-height: auto !important
+
+.dropdownjs
+  .form-control[readonly]
+    background-color: transparent
+    +border-radius(0)
+    +box-shadow(none)
+    border: none
+    color: material-color('grey', '500')
+    padding: 5px 0
+    border-bottom: solid 1px material-color('grey', '300')
+    height: auto
+  ul
+    > li
+      &:first-of-type
+        display: none
+      &:hover
+        background-color: material-color('red', '100')
+
+.table-responsive
+  min-height: 0
+  table
+    margin: 0
+    th
+      font-size: 15px
+      color: material-color('red', '700')
+
+.col-3-3
+  width: 31%
+  float: left
+  padding-left: 2.33333333333333%
+
+.offset-bottom-15
+  margin-bottom: 15px
+
+.offset-top-15
+  margin-top: 15px
+
+.select-lg
+  ~ .dropdownjs
+    ul
+      li~li
+        font-size: 18px
+        font-weight: bold
+
+.results
+  display: none
+
+.terminal
+  margin-bottom: 15px
+
+.filters
+  margin-top: 0
+
+.preload
+  .loader
+    display: block
+
+.rm-r-offset
+  padding-right: 0
+
+.rm-l-offset
+  padding-left: 0
+
+.loader
+  display: none
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(255,255,255,0.8)
+  z-index: 111
+  color: material-color('brown', '600')
+
+.typist-container
+  padding: 15px !important
+  background-color: material-color('grey', '200') !important
+  color: material-color('grey', '900') !important
+  font-size: 14px  !important
+  p.prompt
+    margin: 0 0 5px 0 !important
+    line-height: normal !important
+
+/** Global Styles */
+/* Flex Box */
+.flex-box
+  +display-flex
+  +align-items(center)
+  +justify-content(center)
+  height: 100%
+  width: 100%
+  overflow: auto
+  .flex
+    width: 100%
+    max-height: 100%
